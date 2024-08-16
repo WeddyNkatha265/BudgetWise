@@ -1,0 +1,23 @@
+{
+  "budgets": [
+    {
+      "name": "Food",
+      "amount": "20",
+      "id": "9e74"
+    },
+    {
+      "id": "ca55",
+      "name": "Weddy",
+      "amount": "33"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "ec3c",
+      "name": "Kales",
+      "amount": "20",
+      "budgetId": "9e74"
+    }
+  ],
+  "userName": "User"
+}
