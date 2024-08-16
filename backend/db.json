@@ -9,6 +9,11 @@
       "id": "ca55",
       "name": "Weddy",
       "amount": "33"
+    },
+    {
+      "id": "8769",
+      "name": "laptop",
+      "amount": "300"
     }
   ],
   "expenses": [
@@ -17,6 +22,12 @@
       "name": "Kales",
       "amount": "20",
       "budgetId": "9e74"
+    },
+    {
+      "id": "e663",
+      "name": "laptop",
+      "amount": "2000",
+      "budgetId": "8769"
     }
   ],
   "userName": "User"

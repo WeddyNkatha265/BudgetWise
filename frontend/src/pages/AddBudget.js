@@ -3,16 +3,19 @@ import { postData } from '../api';
 import { toast } from 'react-toastify';
 
 const AddBudget = ({ onAddBudget }) => {
+  // State variables for form inputs
   const [name, setName] = useState('');
   const [amount, setAmount] = useState('');
 
+  // Handle form submission
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent default form submission
     try {
+       // Post new budget data to the server
       const newBudget = await postData('budgets', { name, amount });
       if (newBudget && newBudget.id) {
         onAddBudget(newBudget);  // Update the parent component's state with the new budget
-        setName('');
+        setName('');  // Clear form inputs
         setAmount('');
         toast.success('Budget added successfully!');
       } else {
@@ -28,6 +31,7 @@ const AddBudget = ({ onAddBudget }) => {
     <div className="budget-form-wrapper">
       <h2>Add a New Budget</h2>
       <form className="budget-form" onSubmit={handleSubmit}>
+         {/* Input for budget name */}
         <div className="form-group">
           <label htmlFor="name">Budget Name</label>
           <input
@@ -38,6 +42,7 @@ const AddBudget = ({ onAddBudget }) => {
             required
           />
         </div>
+          {/* Input for budget amount */}
         <div className="form-group">
           <label htmlFor="amount">Amount</label>
           <input
